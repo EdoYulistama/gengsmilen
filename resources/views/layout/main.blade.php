@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{asset('global/vendor/intro-js/introjs.css')}}">
     <link rel="stylesheet" href="{{asset('global/vendor/slidepanel/slidePanel.css')}}">
     <link rel="stylesheet" href="{{asset('global/vendor/flag-icon-css/flag-icon.css')}}">
+    @yield('page-css')
         {{-- <link rel="stylesheet" href="../../../global/vendor/chartist/chartist.css">
         <link rel="stylesheet" href="../../../global/vendor/aspieprogress/asPieProgress.css">
         <link rel="stylesheet" href="../../../global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
@@ -57,11 +58,11 @@
     @include('layout.sidebar')
 
     <div class="page">
-            {!! isset($pageHeader) ? '
+            {{-- {!! isset($pageHeader) ? '
             <div class="page-header">
                     <h1 class="page-title font-size-26 font-weight-100">'.$pageHeader.'</h1>
             </div>
-            ': '' !!}
+            ': '' !!} --}}
     
             <div class="page-content container-fluid">
                 @yield('content')
@@ -104,7 +105,9 @@
     
     <script src="{{asset('global/js/config/colors.js')}}"></script>
     <script src="{{asset('assets/js/config/tour.js')}}"></script>
-    <script>Config.set('assets', '{{asset('assets')}}');</script>
+    <script>Config.set('assets', '../../assets');</script>
+
+    {{-- <script>Config.set('assets', '{{asset('assets')}}');</script> --}}
     
     <!-- Page -->
     <script src="{{asset('assets/js/Site.js')}}"></script>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Wisata;
+namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
@@ -9,8 +9,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-    return view('wisata.dashboard', [
-        'sidemenuActive' => 'dashboard',
+    return view('admin.dashboard', [
+        'sidemenuActive' => 'index',
         'sidemenuSubActive' => '',
 
     ]);

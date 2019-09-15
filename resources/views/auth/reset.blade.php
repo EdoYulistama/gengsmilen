@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js css-menubar" lang="en">
   <head>
@@ -7,7 +8,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>Login | Remark Admin Template</title>
+    <title>Forgot password | Remark Admin Template</title>
     
     <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -24,7 +25,7 @@
     <link rel="stylesheet" href="../../../global/vendor/intro-js/introjs.css">
     <link rel="stylesheet" href="../../../global/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="../../../global/vendor/flag-icon-css/flag-icon.css">
-        <link rel="stylesheet" href="../../assets/examples/css/pages/login.css">
+        <link rel="stylesheet" href="../../assets/examples/css/pages/forgot-password.css">
     
     
     <!-- Fonts -->
@@ -47,44 +48,30 @@
       Breakpoints();
     </script>
   </head>
-  <body class="animsition page-login layout-full page-dark">
+  <body class="animsition page-forgot-password layout-full">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
     <!-- Page -->
-    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">
       <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
-        <div class="brand">
-          <img class="brand-img" src="../../assets//images/logo.png" alt="...">
-            <h2 class="brand-text">DINAS PARIWISATA PESAWARAN</h2>
-        </div>
-        <p>Sign into your pages account</p>
-        <form method="post" action="login.html">
-          <div class="form-group">
-            <label class="sr-only" for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword" name="password"
-              placeholder="Password">
-          </div>
-          <div class="form-group clearfix">
-            <div class="checkbox-custom checkbox-inline checkbox-primary float-left">
-              <input type="checkbox" id="inputCheckbox" name="remember">
-              <label for="inputCheckbox">Remember me</label>
-            </div>
-            <a class="float-right" href="{{ url('/auth/reset/forgot') }}">Forgot password?</a>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-        </form>
-        <p>Still no account? Please go to <a href="{{ url('/auth/signup') }}">Register</a></p>
+        <h2>Forgot Your Password ?</h2>
+        <p>Input your registered email to reset your password</p>
 
-        <footer class="page-copyright page-copyright-inverse">
-          <p>WEBSITE BY Tamtam</p>
-          <p>© 2019. DINAS PARIWISATA PESAWARAN.</p>
+        <form method="post" role="form">
+          <div class="form-group">
+            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Reset Your Password</button>
+          </div>
+        </form>
+
+        <footer class="page-copyright">
+          <p>WEBSITE BY Creation Studio</p>
+          <p>© 2018. All RIGHT RESERVED.</p>
           <div class="social">
             <a class="btn btn-icon btn-pure" href="javascript:void(0)">
           <i class="icon bd-twitter" aria-hidden="true"></i>
@@ -118,7 +105,6 @@
     <script src="../../../global/vendor/intro-js/intro.js"></script>
     <script src="../../../global/vendor/screenfull/screenfull.js"></script>
     <script src="../../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="../../../global/vendor/jquery-placeholder/jquery.placeholder.js"></script>
     
     <!-- Scripts -->
     <script src="../../../global/js/Component.js"></script>
@@ -141,7 +127,6 @@
     <script src="../../../global/js/Plugin/asscrollable.js"></script>
     <script src="../../../global/js/Plugin/slidepanel.js"></script>
     <script src="../../../global/js/Plugin/switchery.js"></script>
-        <script src="../../../global/js/Plugin/jquery-placeholder.js"></script>
     
     <script>
       (function(document, window, $){

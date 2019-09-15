@@ -4,65 +4,68 @@
             <div>
               <ul class="site-menu" data-plugin="menu">
                 <li class="site-menu-category">General</li>
-                <li class="site-menu-item has-sub active open">
-                  <a href="javascript:void(0)">
+                <li class="site-menu-item {{ $sidemenuActive == 'index' ? 'active': '' }}">
+                  <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/dashboard') }}">
                           <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
                           <span class="site-menu-title">Dashboard</span>
-                              <div class="site-menu-badge">
-                                  <span class="badge badge-pill badge-success">3</span>
-                              </div>
-                    </a>
+                  </a>
                 </li>
-                <li class="site-menu-item has-sub">
-                  <a href="javascript:void(0)">
+                <li class="site-menu-item {{ $sidemenuActive == 'pengunjung' ? 'active': '' }}">
+                  <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/pengunjung') }}">
                           <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
-                          <span class="site-menu-title">Populasi Pengeunjung</span>
-                                  <span class="site-menu-arrow"></span>
+                          <span class="site-menu-title">Data Pengunjung</span>
                       </a>
                 </li>
                 
-                <li class="site-menu-item has-sub">
-                  <a href="javascript:void(0)">
+                <li class="site-menu-item {{ $sidemenuActive == 'objekwisata' ? 'active': '' }}">
+                  <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/objekwisata') }}">
                           <i class="site-menu-icon wb-bookmark" aria-hidden="true"></i>
                           <span class="site-menu-title">Data Objek Wisata</span>
-                                  <span class="site-menu-arrow"></span>
-                      </a>
-                  
+                      </a> 
                 
-                <li class="site-menu-item has-sub">
-                  <a href="javascript:void(0)">
+                <li class="site-menu-item {{ $sidemenuActive == 'laporan' ? 'active': '' }}">
+                  <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/laporan') }}">
                           <i class="site-menu-icon wb-pie-chart" aria-hidden="true"></i>
-                          <span class="site-menu-title">Laporan</span>
-                                  <span class="site-menu-arrow"></span>
+                          <span class="site-menu-title">Data Laporan</span>
                       </a>
-                  <ul class="site-menu-sub">
-                    
-                    <li class="site-menu-item">
-                      <a class="animsition-link" href="../charts/c3.html">
-                        <span class="site-menu-title">C3</span>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
-                <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
+                <li class="site-menu-item {{ $sidemenuActive == 'users' ? 'active': '' }}">
+                  <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/users') }}">
                                 <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
-                                <span class="site-menu-title">Manajemen User</span>
-                                        <span class="site-menu-arrow"></span>
+                                <span class="site-menu-title">Data User</span>
                             </a>
                 </li>
-                <li class="site-menu-category">Apps</li>
-                <li class="site-menu-item has-sub">
+                <li class="site-menu-item has-sub {{ $sidemenuActive == 'master' ? 'active open': '' }}">
                   <a href="javascript:void(0)">
                           <i class="site-menu-icon wb-grid-4" aria-hidden="true"></i>
-                          <span class="site-menu-title">Master</span>
+                          <span class="site-menu-title">Data Master</span>
                                   <span class="site-menu-arrow"></span>
                       </a>
                   <ul class="site-menu-sub">
-                    <li class="site-menu-item">
-                      <a class="animsition-link" href="../apps/contacts/contacts.html">
-                        <span class="site-menu-title">Master</span>
+                    <li class="site-menu-item {{ $sidemenuSubActive == 'kepemilikan' ? 'active': '' }}">
+                      <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/master/kepemilikan') }}">
+                        <span class="site-menu-title">Kepemilikan</span>
                       </a>
+                    </li>
+                    <li class="site-menu-item {{ $sidemenuSubActive == 'kecamatan' ? 'active': '' }}">
+                        <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/master/kecamatan') }}">
+                        <span class="site-menu-title">Kecamatan</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item {{ $sidemenuSubActive == 'kelurahan' ? 'active': '' }}">
+                        <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/master/kelurahan') }}">
+                        <span class="site-menu-title">Kelurahan</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item {{ $sidemenuSubActive == 'kategori' ? 'active': '' }}">
+                        <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/master/kategori') }}">
+                           <span class="site-menu-title">Kategori</span>
+                        </a>
+                    </li>
+                    <li class="site-menu-item {{ $sidemenuSubActive == 'potensi' ? 'active': '' }}">
+                        <a class="animsition-link waves-effect waves-classic" href="{{ url('/admin/master/potensi') }}">
+                          <span class="site-menu-title">Potensi</span>
+                        </a>
                     </li>
                     
                   </ul>
